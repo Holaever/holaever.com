@@ -111,6 +111,7 @@
 
 User-agent: *
 Disallow: /_site/
+Disallow: /_backup/
 Disallow: /admin/
 Disallow: /inc/
 Disallow: /data/
