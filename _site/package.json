@@ -1,0 +1,28 @@
+{
+  "name": "holaever.com",
+  "description": "我们是一群创意的思想家和制造者，致力于打造不同寻常、电影级别的软件产品，这是我们的品牌。我们只维护一份解决方案，不断迭代更新、追求完美，以确保较高程度的质量、灵活、效率，并与时俱进！",
+  "keywords": ["holaever", "哈咯"],
+  "version": "1.0.0",
+  "authors": [
+    "iTonyYo <ceo@holaever.com> (https://github.com/iTonyYo)"
+  ],
+  "homepage": "http://www.holaever.com/",
+  "repository": {
+    "type": "git",
+    "url" : "https://github.com/Holaever/holaever.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Holaever/holaever.com/issues"
+  },
+  "private": false,
+  "scripts": {
+    "start": "",
+    "test": ""
+  },
+  "engines": {
+    "node": ">=4.1.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "(MIT OR Apache-2.0)"
+}
