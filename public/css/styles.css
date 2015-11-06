@@ -820,6 +820,10 @@ section #title .credits.right {
   float: right;
 }
 
+b.underline {
+    text-decoration: underline;
+}
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
