@@ -1,0 +1,54 @@
+extends layout
+
+block private-stylesheet
+  link(rel='stylesheet', href='css/404.css')
+
+block content
+  h1= message
+  .frame
+    div
+    div
+    div
+  canvas#canvas
+
+block private-script
+  script.
+    var Application = ( function () {
+      var canvas;
+      var ctx;
+      var imgData;
+      var pix;
+      var WIDTH;
+      var HEIGHT;
+      var flickerInterval;
+
+      var init = function () {
+        canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');
+        canvas.width = WIDTH = window.outerWidth;
+        canvas.height = HEIGHT = window.outerHeight;
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        ctx.fill();
+        imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
+        pix = imgData.data;
+        flickerInterval = setInterval(flickering, 30);
+      };
+
+      var flickering = function () {
+        for (var i = 0; i < pix.length; i += 4) {
+          var color = (Math.random() * 300) + 50;
+          pix[i] = color;
+          pix[i + 1] = color;
+          pix[i + 2] = color;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      };
+
+      return {
+        init: init
+      };
+
+    }());
+
+    Application.init();
