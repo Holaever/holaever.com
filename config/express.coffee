@@ -1,5 +1,6 @@
 express = require 'express'
 glob = require 'glob'
+async = require 'async'
 
 favicon = require 'serve-favicon'
 logger = require 'morgan'
@@ -12,7 +13,7 @@ module.exports = (app, config) ->
   env = process.env.NODE_ENV || 'development'
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development'
-  
+
   app.set 'views', config.root + '/app/views'
   app.set 'view engine', 'jade'
 
@@ -28,8 +29,14 @@ module.exports = (app, config) ->
   app.use methodOverride()
 
   controllers = glob.sync config.root + '/app/controllers/**/*.coffee'
-  controllers.forEach (controller) ->
-    require(controller)(app);
+  async.each controllers, (controller, callback) ->
+    require(controller)(app)
+    callback()
+    return
+  , (err) ->
+    if err
+      console.log 'A file failed to process.'
+    return
 
   # catch 404 and forward to error handler
   app.use (req, res, next) ->
@@ -41,7 +48,7 @@ module.exports = (app, config) ->
 
   # development error handler
   # will print stacktrace
-  
+
   if app.get('env') == 'development'
     app.use (err, req, res, next) ->
       res.status err.status || 500
