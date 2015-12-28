@@ -27,7 +27,6 @@ module.exports = (app, config) ->
   app.use compress()
   app.use express.static config.root + '/public'
   app.use methodOverride()
-
   controllers = glob.sync config.root + '/app/controllers/**/*.coffee'
   async.each controllers, (controller, callback) ->
     require(controller)(app)
@@ -42,7 +41,10 @@ module.exports = (app, config) ->
   app.use (req, res, next) ->
     err = new Error 'Not Found'
     err.status = 404
-    next err
+    res.render '404',
+      message: '您访问的页面不存在'
+      error: err
+      title: '404'
 
   # error handlers
 
