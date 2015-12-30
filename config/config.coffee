@@ -7,21 +7,21 @@ config =
     root: rootPath
     app:
       name: 'holaever-com'
-    port: 9022
+    port: 3000
     db: 'mongodb://localhost/holaever-com-development'
 
   test:
     root: rootPath
     app:
       name: 'holaever-com'
-    port: 9022
+    port: 3000
     db: 'mongodb://localhost/holaever-com-test'
 
   production:
     root: rootPath
     app:
       name: 'holaever-com'
-    port: 9022
+    port: 3000
     db: 'mongodb://localhost:27017/'
 
 module.exports = config[env]
