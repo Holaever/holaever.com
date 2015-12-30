@@ -1,0 +1,130 @@
+{
+  "path": {
+    "root": "./",
+    "backup": "backup/",
+    "design": "design/",
+    "splited_build_tasks": "gulp/",
+    "dev": {
+      "root": "dev/",
+      "img": {
+        "root": "dev/image/",
+        "tp": ""
+      },
+      "sass": {
+        "root": "dev/stylesheet/",
+        "tp": ""
+      },
+      "script": {
+        "root": "dev/script/",
+        "tp": ""
+      },
+      "font": {
+        "root": "dev/font/"
+      }
+    },
+    "dest": {
+      "root": "public/",
+      "img": {
+        "root": "public/img/",
+        "tp": ""
+      },
+      "css": {
+        "root": "public/css/",
+        "tp": "",
+        "bower": "bower_components/"
+      },
+      "javascript": {
+        "root": "public/js/",
+        "tp": ""
+      },
+      "font": {
+        "root": "public/font/"
+      }
+    }
+  },
+  "sprite_order": [],
+  "clean_order": ["public"],
+  "clp": [
+    "minhtml",
+    "csso",
+    "coffeelint",
+    "uglify",
+    "size",
+    "notify",
+    "preprocess",
+    "nopreprocess",
+    "preview",
+    "precommit"
+  ],
+  "psi_site": "",
+  "preview_opts": {
+    "dir": "dest",
+    "host": "localhost",
+    "port": 9022,
+    "livereload": true
+  },
+  "jade_opts": {
+    "pretty": true
+  },
+  "html_cmprs_opts": {
+    "empty": true,
+    "cdata": false,
+    "comments": false,
+    "conditionals": false,
+    "spare": false,
+    "quotes": false
+  },
+  "ruby_sass_opts": {
+    "sourcemap=none": true,
+    "style": "nested",
+    "precision": 8,
+    "check": false,
+    "quiet": false,
+    "compass": true
+  },
+  "cssmin_opts": {
+    "keepSpecialComments": "*",
+    "keepBreaks": false,
+    "noRebase": true,
+    "noAdvanced": true
+  },
+  "cs_opts": {
+    "bare": true
+  },
+  "jsx_opts": {
+    "factory": "React.createClass"
+  },
+  "cjsx_opts": {
+    "bare": true
+  },
+  "cmprs_opts": {
+    "mangle": {
+      "except": [
+        "require",
+        "jQuery"
+      ]
+    }
+  },
+  "notify_opts": {
+    "title": "Gulp Notification",
+    "message": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "sound": true
+  },
+  "message": {
+    "jade": "Jade 任务执行成功！",
+    "html": "页面预览成功！",
+    "htmlmin": "HTML 压缩成功！",
+    "sass": "Sass 任务执行成功！",
+    "csslint": "CSS 样式表文件语法、规范检测完毕！",
+    "csso": "CSS 压缩（ CSSO ）成功成功！",
+    "uncss": "CSS 压缩（ UNCSS ）成功成功！",
+    "coffeescript": "CoffeeScript 预处理成功！",
+    "coffeelint": "Lint completely!",
+    "jsx": "",
+    "jshint": "JS 检测完毕！",
+    "jsmin": "JavaScript 压缩成功成功！",
+    "cmprs_root_js_src": "JS files from root have been compressed completely!",
+    "cmprs_splited_tasks_js_src": "JS files from 'gulp' folder have been compressed completely!"
+  }
+
+}
