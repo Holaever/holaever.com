@@ -20,11 +20,11 @@ Application = do ->
   flickering = ->
     i = 0
     while i < pix.length
-      color = Math.random() * 300 + 50
+      color = Math.random() * 355 + 50
       pix[i] = color
       pix[i + 1] = color
       pix[i + 2] = color
-      i += 4
+      i += 6
     ctx.putImageData imgData, 0, 0
     return
 
