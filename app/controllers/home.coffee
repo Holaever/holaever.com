@@ -10,5 +10,5 @@ router.get '/', (req, res, next) ->
   Article.find (err, articles) ->
     return next(err) if err
     res.render 'index',
-      title: 'Generator-Express MVC'
+      title: 'Express MVC'
       articles: articles
