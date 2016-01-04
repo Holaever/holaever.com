@@ -1,13 +1,13 @@
 express = require 'express'
 glob = require 'glob'
 async = require 'async'
-
 favicon = require 'serve-favicon'
 logger = require 'morgan'
 cookieParser = require 'cookie-parser'
 bodyParser = require 'body-parser'
 compress = require 'compression'
 methodOverride = require 'method-override'
+zlib = require 'zlib'
 
 module.exports = (app, config) ->
   env = process.env.NODE_ENV || 'development'
@@ -16,6 +16,8 @@ module.exports = (app, config) ->
 
   app.set 'views', config.root + '/app/views'
   app.set 'view engine', 'jade'
+  app.set 'view options',
+    pretty: env is 'development'
 
   # app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use logger 'dev'
@@ -24,7 +26,8 @@ module.exports = (app, config) ->
     extended: true
   )
   app.use cookieParser()
-  app.use compress()
+  app.use compress
+    level: zlib.Z_BEST_COMPRESSION
   app.use express.static config.root + '/public'
   app.use methodOverride()
   controllers = glob.sync config.root + '/app/controllers/**/*.coffee'
