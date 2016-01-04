@@ -28,6 +28,7 @@ module.exports = (app, config) ->
   app.use cookieParser()
   app.use compress
     level: zlib.Z_BEST_COMPRESSION
+    memLevel: 1
   app.use express.static config.root + '/public'
   app.use methodOverride()
   controllers = glob.sync config.root + '/app/controllers/**/*.coffee'
