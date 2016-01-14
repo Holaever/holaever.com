@@ -32,11 +32,27 @@ jsmin = lazypipe().pipe($.uglify).pipe(->
   $['if'] clp.notify, $.notify(cfg.message.jsmin)
 )
 
+gulp.task 'compress:html', ->
+  gulp.src(
+    '*.html', cwd: cfg.path.dest.root
+  ).pipe $.minifyHtml cfg.html_cmprs_opts
+  .pipe gulp.dest cfg.path.dest.root
+
 gulp.task 'compress:js', ->
+  gulp.src(
+    '**/*.js', cwd: cfg.path.dest.javascript.root
+  ).pipe gulp.dest cfg.path.dest.javascript.root
 
 gulp.task 'compress:css', ->
+  gulp.src(
+    '**/*.css', cwd: cfg.path.dest.css.root
+  ).pipe $.minifyCSS cfg.cssmin_opts
+  .pipe gulp.dest cfg.path.dest.css.root
 
 gulp.task 'compress:img', ->
+    gulp.src cfg.path.dev.img.root + '**/*.+(png|jpg)'
+    .pipe $.tinypng(keys.TinyPNG_APIkey_Gmail)
+    .pipe gulp.dest cfg.path.dest.img.root
 
 gulp.task 'gzip', ->
   gulp
@@ -46,6 +62,7 @@ gulp.task 'gzip', ->
 
 gulp.task 'compress', (cb) ->
   run_sequence [
+    'compress:html'
     'compress:js'
     'compress:css'
     'compress:img'
