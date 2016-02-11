@@ -8,29 +8,33 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+(function () {
+    var page;
+    page = document.createElement('div');
+    page.id = 'page';
+    document.body.insertBefore(page, document.body.firstChild);
+})();
+
 var PageHeader = function (_React$Component) {
     _inherits(PageHeader, _React$Component);
 
     function PageHeader(props) {
         _classCallCheck(this, PageHeader);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PageHeader).call(this, props));
-
-        _this.displayName = '';
-        return _this;
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(PageHeader).call(this, props));
     }
 
     _createClass(PageHeader, [{
         key: 'render',
         value: function render() {
-            var urku_search_useTag = '<use xlink:href="assets/img/symbols.svg#icon-search"></use>',
-                mobile_menu_useTag_1 = '<use xlink:href="assets/img/symbols.svg#bar"></use>',
-                mobile_menu_useTag_2 = '<use xlink:href="assets/img/symbols.svg#bar"></use>',
-                mobile_menu_useTag_3 = '<use xlink:href="assets/img/symbols.svg#bar"></use>';
+            var hs_search_useTag = '<use xlink:href="public/img/st/symbols.svg#icon-search"></use>',
+                mobile_menu_useTag_1 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>',
+                mobile_menu_useTag_2 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>',
+                mobile_menu_useTag_3 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>';
             return React.createElement(
                 'header',
-                { className: 'ae-container-fluid ae-container-fluid--full rk-header' },
-                React.createElement('input', { type: 'checkbox', id: 'mobile-menu', className: 'rk-mobile-menu' }),
+                { className: 'hs-header' },
+                React.createElement('input', { type: 'checkbox', id: 'mobile-menu', className: 'hs-mobile-menu' }),
                 React.createElement(
                     'label',
                     { 'for': 'mobile-menu' },
@@ -40,14 +44,14 @@ var PageHeader = function (_React$Component) {
                 ),
                 React.createElement(
                     'div',
-                    { className: 'ae-container-fluid rk-topbar' },
+                    { className: 'hs-topbar' },
                     React.createElement(
                         'h1',
-                        { className: 'rk-logo' },
+                        { className: 'hs-logo' },
                         React.createElement(
                             'a',
                             { href: 'index.html' },
-                            'urku portfolio',
+                            'Holaever',
                             React.createElement(
                                 'sup',
                                 null,
@@ -57,143 +61,64 @@ var PageHeader = function (_React$Component) {
                     ),
                     React.createElement(
                         'nav',
-                        { className: 'rk-navigation' },
+                        { className: 'hs-navigation' },
                         React.createElement(
                             'ul',
-                            { className: 'rk-menu' },
+                            { className: 'hs-menu' },
                             React.createElement(
                                 'li',
-                                { className: 'rk-menu__item' },
+                                { className: 'hs-menu-item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'index.html', className: 'rk-menu__link' },
-                                    'Home'
+                                    { href: 'index.html', className: 'hs-menu-link' },
+                                    '首页'
                                 )
                             ),
                             React.createElement(
                                 'li',
-                                { className: 'rk-menu__item' },
+                                { className: 'hs-menu-item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'portfolio.html', className: 'rk-menu__link' },
-                                    'Portfolio'
-                                ),
+                                    { href: 'portfolio.html', className: 'hs-menu-link' },
+                                    '作品'
+                                )
+                            ),
+                            React.createElement(
+                                'li',
+                                { className: 'hs-menu-item' },
                                 React.createElement(
-                                    'nav',
-                                    { className: 'rk-menu__sub' },
-                                    React.createElement(
-                                        'ul',
-                                        { className: 'rk-container' },
-                                        React.createElement(
-                                            'li',
-                                            { className: 'rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: 'portfolio.html', className: 'rk-menu__link' },
-                                                'Flex'
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'li',
-                                            { className: 'rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: 'portfolio-alt.html', className: 'rk-menu__link' },
-                                                'Switch'
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'li',
-                                            { className: 'rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: 'portfolio-raw.html', className: 'rk-menu__link' },
-                                                'Static'
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'li',
-                                            { className: 'rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: 'portfolio-masonry.html', className: 'rk-menu__link' },
-                                                'Masonry'
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'li',
-                                            { className: 'rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: 'blog.html', className: 'rk-menu__link' },
-                                                'Blog'
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'li',
-                                            { className: 'active rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: '#0', className: 'rk-menu__link' },
-                                                'Pages'
-                                            ),
-                                            React.createElement(
-                                                'nav',
-                                                { className: 'rk-menu__sub' },
-                                                React.createElement(
-                                                    'ul',
-                                                    { className: 'rk-container' },
-                                                    React.createElement(
-                                                        'li',
-                                                        { className: 'rk-menu__item' },
-                                                        React.createElement(
-                                                            'a',
-                                                            { href: 'about.html', className: 'rk-menu__link' },
-                                                            'About'
-                                                        )
-                                                    ),
-                                                    React.createElement(
-                                                        'li',
-                                                        { className: 'rk-menu__item' },
-                                                        React.createElement(
-                                                            'a',
-                                                            { href: 'documentation.html', className: 'rk-menu__link' },
-                                                            'Documentation'
-                                                        )
-                                                    ),
-                                                    React.createElement(
-                                                        'li',
-                                                        { className: 'rk-menu__item' },
-                                                        React.createElement(
-                                                            'a',
-                                                            { href: 'design-styles.html', className: 'rk-menu__link' },
-                                                            'Design Styles'
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'li',
-                                            { className: 'rk-menu__item' },
-                                            React.createElement(
-                                                'a',
-                                                { href: 'contact.html', className: 'rk-menu__link' },
-                                                'Contact Us'
-                                            )
-                                        )
-                                    )
+                                    'a',
+                                    { href: 'blog.html', className: 'hs-menu-link' },
+                                    '日志'
+                                )
+                            ),
+                            React.createElement(
+                                'li',
+                                { className: 'active hs-menu-item' },
+                                React.createElement(
+                                    'a',
+                                    { href: '#0', className: 'hs-menu-link' },
+                                    '关于'
+                                )
+                            ),
+                            React.createElement(
+                                'li',
+                                { className: 'hs-menu-item' },
+                                React.createElement(
+                                    'a',
+                                    { href: 'contact.html', className: 'hs-menu-link' },
+                                    '联系'
                                 )
                             )
                         ),
                         React.createElement(
                             'form',
-                            { className: 'rk-search' },
-                            React.createElement('input', { type: 'text', placeholder: 'Search', id: 'urku-search', className: 'rk-search-field' }),
+                            { className: 'hs-search' },
+                            React.createElement('input', { type: 'text', placeholder: 'Search', id: 'hs-search', className: 'hs-search-field' }),
                             React.createElement(
                                 'label',
-                                { 'for': 'urku-search' },
-                                React.createElement('svg', { dangerouslySetInnerHTML: { __html: urku_search_useTag } })
+                                { 'for': 'hs-search' },
+                                React.createElement('svg', { dangerouslySetInnerHTML: { __html: hs_search_useTag } })
                             )
                         )
                     )
@@ -211,10 +136,7 @@ var Portrait = function (_React$Component2) {
     function Portrait(props) {
         _classCallCheck(this, Portrait);
 
-        var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(Portrait).call(this, props));
-
-        _this2.displayName = '';
-        return _this2;
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(Portrait).call(this, props));
     }
 
     _createClass(Portrait, [{
@@ -222,32 +144,32 @@ var Portrait = function (_React$Component2) {
         value: function render() {
             return React.createElement(
                 'div',
-                { 'class': 'ae-container-fluid ae-container-fluid--inner rk-main' },
+                { className: 'hs-main' },
                 React.createElement(
                     'div',
-                    { 'class': 'ae-grid au-xs-ta-center au-mb-4' },
+                    { className: '' },
                     React.createElement(
                         'div',
-                        { 'class': 'ae-grid__item item-lg-4 ae-kappa au-mb-3' },
-                        React.createElement('img', { src: 'assets/img/team-1.jpg', alt: '', 'class': 'au-mb-3' }),
+                        { className: '' },
+                        React.createElement('img', { src: 'public/img/st/team-1.jpg', alt: '', className: '' }),
                         React.createElement(
                             'h5',
-                            { 'class': 'ae-u-bolder au-mt-2' },
+                            { className: '' },
                             'Robert T. Williams'
                         ),
                         React.createElement(
                             'p',
-                            { 'class': 'ae-u-bolder au-mb-3' },
+                            { className: '' },
                             'Graphic Designer'
                         ),
                         React.createElement(
                             'p',
-                            { 'class': 'au-lg-ta-left au-mb-3 au-pl-4 au-pr-4' },
+                            { className: '' },
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
                         ),
                         React.createElement(
                             'a',
-                            { href: '#0', 'class': 'ae-u-bolder au-underline' },
+                            { href: '#', className: '' },
                             '@robertwilliams'
                         )
                     )
@@ -259,4 +181,28 @@ var Portrait = function (_React$Component2) {
     return Portrait;
 }(React.Component);
 
-ReactDOM.render(React.createElement(PageHeader, null), document.getElementById('page'));
+var Page = function (_React$Component3) {
+    _inherits(Page, _React$Component3);
+
+    function Page(props) {
+        _classCallCheck(this, Page);
+
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(Page).call(this, props));
+    }
+
+    _createClass(Page, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(PageHeader, null),
+                React.createElement(Portrait, null)
+            );
+        }
+    }]);
+
+    return Page;
+}(React.Component);
+
+ReactDOM.render(React.createElement(Page, null), document.getElementById('page'));

@@ -5,11 +5,11 @@
 
 require 'coffee-script/register'
 
-cfg = require('../config.json')
-gulp = require('gulp')
-$ = require('gulp-load-plugins')()
+cfg          = require('../config.json')
+gulp         = require('gulp')
+$            = require('gulp-load-plugins')()
 run_sequence = require('run-sequence')
-clp = require('./clp.coffee')
+clp          = require('./clp.coffee')
 
 sass_opts = {
   "errLogToConsole": true,
@@ -22,7 +22,7 @@ sass_opts = {
 # process what you need and save time + resources.
 gulp.task 'sass', (cb) ->
   gulp.src(
-    cfg.path.dev.sass.root + '**/*.+(sass|scss)'
+    cfg.path.dev.sass.root + '**/*.scss'
   ).pipe(
     $.changed(cfg.path.dest.css.root)
   ).pipe(
