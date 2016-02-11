@@ -1,0 +1,8 @@
+{
+  "analytics": true,
+  "directory": "./bower_components",
+  "timeout": 6000,
+  "color": true,
+  "interactive": true,
+  "json": "bower.json"
+}
