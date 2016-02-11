@@ -9,10 +9,10 @@ cfg  = require('../config.json')
 gulp = require('gulp')
 bs   = require('browser-sync')
 
-gulp.task 'browser-sync', ['nodemon'], ->
+gulp.task 'bs', ->
   bs
-    proxy: 'http://localhost:3000'
-    files: ['../public/**/*.*']
     browser: 'google chrome'
-    port: 9022
+    port: 9022,
+    server:
+      baseDir: './'
   return

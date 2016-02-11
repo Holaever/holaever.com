@@ -5,10 +5,10 @@
 
 'use strict'
 
-cfg = require('../config.json')
-gulp = require('gulp')
+cfg   = require('../config.json')
+gulp  = require('gulp')
 bower = require('main-bower-files')
-$ = require('gulp-load-plugins')()
+$     = require('gulp-load-plugins')()
 
 gulp.task 'bowernmiz', ->
   gulp

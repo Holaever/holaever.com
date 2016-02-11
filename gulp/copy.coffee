@@ -50,10 +50,11 @@ gulp.task 'copy:font', ->
 
 gulp.task 'copy:js', ->
   copyScriptOpts =
-    baseUrl: 'dev/script/vendor'
+    baseUrl: 'dev/script/'
     nottraversal: [
       'private'
       'framework'
+      'page'
     ]
   dirPath = process.cwd() + '/' + copyScriptOpts.baseUrl
   dirCache = readDirFolderCache(dirPath)

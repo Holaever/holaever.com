@@ -5,13 +5,13 @@
 
 'use strict'
 
-cfg = require('../config.json')
-gulp = require('gulp')
-$ = require('gulp-load-plugins')()
-FF = require('node-find-folder')
-_ = require('lodash')
-del = require('del')
-order = cfg.clean_order
+cfg        = require('../config.json')
+gulp       = require('gulp')
+$          = require('gulp-load-plugins')()
+FF         = require('node-find-folder')
+_          = require('lodash')
+del        = require('del')
+order      = cfg.clean_order
 cln_prefix = 'clean-'
 
 _.forEach order, (item, index, list) ->

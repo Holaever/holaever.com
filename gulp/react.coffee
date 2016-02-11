@@ -5,13 +5,16 @@
 
 'use strict'
 
-cfg = require('../config.json')
-gulp = require('gulp')
-lazypipe = require('lazypipe')
+cfg          = require('../config.json')
+gulp         = require('gulp')
+lazypipe     = require('lazypipe')
 run_sequence = require('run-sequence')
-clp = require('./clp.coffee')
-sizer = require('./size.coffee')
-$ = require('gulp-load-plugins')()
+clp          = require('./clp.coffee')
+sizer        = require('./size.coffee')
+$            = require('gulp-load-plugins')()
+webpack      = require 'webpack'
+gulpWebpack  = require 'webpack-stream'
+named        = require 'vinyl-named'
 
 gulp.task 'react', (cb) ->
   gulp.src([
@@ -21,7 +24,7 @@ gulp.task 'react', (cb) ->
   .pipe($.changed(cfg.path.dest.javascript.root))
   .pipe($.cached('react_hola'))
   .pipe($.plumber())
-  .pipe($.babel())
+  .pipe $.babel()
   .pipe(gulp.dest(cfg.path.dest.javascript.root))
   .pipe($['if'](clp.uglify, $.uglify(cfg.uglify_opts)))
   .pipe(gulp.dest(cfg.path.dest.javascript.root))

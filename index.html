@@ -45,21 +45,14 @@
 
     <title>哈咯 · Holaever</title>
 
-    <link rel="stylesheet" href="public/css/styles.css">
-    <link rel="stylesheet" href="public/css/github-dark.css">
-
     <!--[if gt IE 8]><!-->
-      <script src="public/js/vendor/prefixfree.min.js"></script>
+      <script src="public/vendor/prefixfree/prefixfree.min.js"></script>
     <!--<![endif]-->
 
-    <script src="public/js/vendor/respond.js"></script>
+    <script src="public/vendor/respond.js"></script>
 
     <!--[if lt IE 9]>
-      <script src="public/js/vendor/html5shiv.min.js"></script>
-    <![endif]-->
-
-    <!--[if lt IE 8]>
-      <link rel="stylesheet" href="public/css/ie.css">
+      <script src="public/vendor/html5shiv/js/html5shiv.min.js"></script>
     <![endif]-->
 
   </head>
@@ -69,94 +62,21 @@
         <p class="browsehappy">您正在使用 <strong>过时的</strong> 浏览器。 请 <a href="http://browsehappy.com/">更新你的浏览器</a> 以提高你的访问体验。</p>
     <![endif]-->
 
-    <div id="header"></div>
-
-    <div class="wrapper">
-
-      <section>
-
-        <div id="title">
-          <h1>
-            哈咯 · Holaever
-          </h1>
-          <p>
-            我们打造非比寻常、电影级别的软件产品！
-          </p>
-          <hr>
-          <span class="credits left">
-            WWW.HOLAEVER.COM 由&nbsp;
-            <a href="https://github.com/Holaever">
-              "哈咯 · Holaever"
-            </a>
-            &nbsp;维护
-          </span>
-          <span class="credits right">
-            代码托管在 GitHub Pages 上 &mdash; 页面主题来自&nbsp;
-            <a href="https://twitter.com/michigangraham">
-              mattgraham
-            </a>
-          </span>
-        </div>
-
-        <h3>网站声明</h3>
-        <p>
-         您现在访问的是临时 "哈咯 · Holaever" 官网，正式官网将会尽快上线！
-        </p>
-
-        <h3>"哈咯 · Holaever" 业务</h3>
-        <p>
-         <b class="underline">按场景</b>，"哈咯 · Holaever" 目前支持网站、WEB应用、WAP、微信订阅&服务&企业号、移动应用以及桌面电脑应用等设计 & 开发。
-        </p>
-        <p>
-         <b class="underline">按类型</b>，"哈咯 · Holaever" 目前支持响应式、固定布局网站设计 & 开发、WEB 应用设计 & 开发、WAP 页面设计 & 开发、混合模式移动
-         应用 ( Hybrid App ) 设计 & 开发、原生 Android & IOS App 设计 & 开发、跨平台桌面客户端设计 & 开发。
-        </p>
-
-        <h3>关于 "哈咯 · Holaever"</h3>
-        <p>
-         我们是一群创意的思想家和制造者，致力于打造不同寻常、电影级别的软件产品，这是我们的品牌。我们只维护一份解决方案，不断迭代更新、追求
-         完美，以确保较高程度的质量、灵活、效率，并与时俱进！团队、公司、产品，"哈咯 · Holaever" 的发展路线。
-        </p>
-        <p>
-          每一个成员见到别的伙伴，或面对新的工具、技术，或发现身边美好的事物，或面对客户，或面对每一次的挑战...... 都会亲切地说声 “哈咯”
-          （O(∩_∩)O哈！产品发布时，我们也会很高兴地向TA打声招呼：“哈咯！”）。
-        </p>
-        <p>
-          每一个成员都在不停地学习、实践新的知识、技能，恰巧这些源源不断的积累让我们掌握了些什么以打造不同寻常、电影级别的软件产品。
-        </p>
-        <p>
-          每一个成员都有自己的专长，但都不为职责、角色限制，全力以赴！
-        </p>
-        <p>
-          这就是我们，以及我们生活的每一天，为了实力、创造 & 梦想，驾驭着血、汗和眼泪！
-        </p>
-
-        <h3>支持 & 联系</h3>
-        <p>
-          寻找合作？您可以发送邮件至
-           <a href="mailto:hello@holaever.com">hello@holaever.com</a>；
-           有任何关于 "哈咯 · Holaever" 的疑惑、困难等，您可以发送邮件至
-           <a href="mailto:feedback@holaever.com">help@holaever.com</a>；
-           有任何关于 "哈咯 · Holaever" 的反馈、建议等，您可以发送邮件至
-           <a href="mailto:feedback@holaever.com">feedback@holaever.com</a>。
-        </p>
-        <p>随时欢迎您的来信！我们会仔细查阅您的邮件并及时联系您。</p>
-
-      </section>
-
-    </div>
-
-    <script src="public/js/vendor/polyfill.min.js"></script>
+    <div id="page"></div>
 
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
+    <script src="public/vendor/react/js/react.js"></script>
+    <script src="public/vendor/react/js/react-dom.js"></script>
+    <script src="public/vendor/polyfill.min.js"></script>
+
     <!--[if lte IE 8]>
-      <script src="public/js/vendor/jquery-compat-3.0.0-alpha1.min.js"></script>
+      <script src="public/vendor/jquery_series_3/jquery-compat-3.0.0-alpha1.min.js"></script>
       <script>window.jQuery || document.write('<script src="//code.jquery.com/jquery-compat-3.0.0-alpha1.min.js"><\/script>')</script>
     <![endif]-->
 
     <!--[if gt IE 8]><!-->
-      <script src="public/js/vendor/jquery-3.0.0-alpha1.min.js"></script>
+      <script src="public/vendor/jquery_series_3/jquery-3.0.0-alpha1.min.js"></script>
       <script>window.jQuery || document.write('<script src="//code.jquery.com/jquery-3.0.0-alpha1.min.js"><\/script>')</script>
     <!--<![endif]-->
 

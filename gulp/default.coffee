@@ -5,16 +5,16 @@
 
 'use strict'
 
-cfg = require '../config.json'
-gulp = require 'gulp'
+cfg          = require '../config.json'
+gulp         = require 'gulp'
 run_sequence = require 'run-sequence'
-clp = require './clp.coffee'
+clp          = require './clp.coffee'
 
 gulp.task 'default', (cb) ->
   if clp.preview
-    run_sequence 'browser-sync', cb
+    run_sequence 'bs', cb
   else if clp.nopreprocess
-    run_sequence 'browser-sync', 'watch', cb
+    run_sequence 'bs', 'watch', cb
   else if clp.precommit
     run_sequence 'clean', 'copy', 'preen', 'bowernmiz', [
       'sass'
@@ -28,5 +28,5 @@ gulp.task 'default', (cb) ->
       'react'
       'cs'
       'sprites'
-    ], 'browser-sync', 'watch', cb
+    ], 'bs', 'watch', cb
   return

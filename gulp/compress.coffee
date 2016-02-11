@@ -40,7 +40,7 @@ gulp.task 'compress:js', ->
 gulp.task 'compress:css', ->
   gulp.src(
     '**/*.css', cwd: cfg.path.dest.css.root
-  ).pipe $.minifyCSS cfg.cssmin_opts
+  ).pipe $.cssnano cfg.cssmin_opts
   .pipe gulp.dest cfg.path.dest.css.root
 
 gulp.task 'compress:img', ->
