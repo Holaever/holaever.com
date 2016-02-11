@@ -1,0 +1,231 @@
+{
+  "name": "holaever.com",
+  "description": "路人甲，分享你的选择！",
+  "keywords": [
+    "holaever"
+  ],
+  "version": "1.0.0",
+  "author": [
+    "iTonyYo <ceo@holaever.com> (http://itonyyo.github.io/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Holaever/holaever.com.git"
+  },
+  "homepage": "https://github.com/Holaever/holaever.com",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "test",
+    "tests",
+    "doc",
+    "gulp",
+    "dev",
+    "design",
+    ".idea",
+    "*.sublime-project",
+    "*.sublime-workspace"
+  ],
+  "dependencies": {
+    "reset-css": ">=2.0.20110126",
+    "normalize_ancient": "normalize.css#1.1.3",
+    "normalize_modern": "normalize.css#3.0.2",
+    "jquery_series_1": "jquery#1.11.3",
+    "jquery_series_2": "jquery#2.1.4",
+    "jquery_easing": "jquery-easing-original#1.3.2",
+    "requirejs": ">=2.1.20",
+    "html5shiv": ">=3.7.3",
+    "modernizr_series_2": "modernizr#>=2.8.3",
+    "respond": ">=1.4.2",
+    "console_polyfill": "console-polyfill#>=0.2.1",
+    "font_awesome": "fontawesome#3.2.1",
+    "react": ">=0.14.7"
+  },
+  "devDependencies": {},
+  "preen": {
+    "reset-css": [
+      "reset.css"
+    ],
+    "normalize_ancient": [
+      "normalize.css"
+    ],
+    "normalize_modern": [
+      "normalize.css"
+    ],
+    "jquery_series_1": [
+      "dist/jquery.js",
+      "dist/jquery.min.js",
+      "dist/jquery.min.map"
+    ],
+    "jquery_series_2": [
+      "dist/jquery.js",
+      "dist/jquery.min.js",
+      "dist/jquery.min.map"
+    ],
+    "jquery_easing": [
+      "jquery.easing.js",
+      "jquery.easing.min.js",
+      "jquery.easing.compatibility.js"
+    ],
+    "requirejs": [
+      "require.js"
+    ],
+    "html5shiv": [
+      "dist/html5shiv.js",
+      "dist/html5shiv.min.js",
+      "dist/html5shiv-printshiv.js",
+      "dist/html5shiv-printshiv.min.js"
+    ],
+    "modernizr_series_2": [
+      "modernizr.js"
+    ],
+    "respond": [
+      "dest/*.js",
+      "src/*.js"
+    ],
+    "console_polyfill": [
+      "index.js"
+    ],
+    "font_awesome": [
+      "css/font-awesome-ie7.css",
+      "css/font-awesome-ie7.min.css",
+      "css/font-awesome.css",
+      "css/font-awesome.min.css",
+      "font/fontawesome-webfont.eot",
+      "font/fontawesome-webfont.svg",
+      "font/fontawesome-webfont.ttf",
+      "font/fontawesome-webfont.woff",
+      "font/FontAwesome.otf",
+      "less/bootstrap.less",
+      "less/core.less",
+      "less/extras.less",
+      "less/font-awesome-ie7.less",
+      "less/font-awesome.less",
+      "less/icons.less",
+      "less/mixins.less",
+      "less/path.less",
+      "less/variables.less",
+      "scss/_bootstrap.scss",
+      "scss/_core.scss",
+      "scss/_extras.scss",
+      "scss/_icons.scss",
+      "scss/_mixins.scss",
+      "scss/_path.scss",
+      "scss/_variables.scss",
+      "scss/font-awesome-ie7.scss",
+      "scss/font-awesome.scss"
+    ],
+    "react": [
+      "react-dom-server.js",
+      "react-dom-server.min.js",
+      "react-dom.js",
+      "react-dom.min.js",
+      "react.js",
+      "react.min.js",
+      "react-with-addons.js",
+      "react-with-addons.min.js"
+    ]
+  },
+  "overrides": {
+    "reset-css": {
+      "main": "reset.css"
+    },
+    "normalize_ancient": {
+      "main": "normalize.css"
+    },
+    "normalize_modern": {
+      "main": "normalize.css"
+    },
+    "jquery_series_1": {
+      "main": [
+        "dist/jquery.js"
+      ]
+    },
+    "jquery_series_2": {
+      "main": [
+        "dist/jquery.js"
+      ]
+    },
+    "jquery_easing": {
+      "main": [
+        "jquery.easing.js",
+        "jquery.easing.min.js",
+        "jquery.easing.compatibility.js"
+      ]
+    },
+    "requirejs": {
+      "main": "require.js"
+    },
+    "html5shiv": {
+      "main": [
+        "dist/html5shiv.js",
+        "dist/html5shiv-printshiv.js"
+      ]
+    },
+    "modernizr": {
+      "main": "modernizr.js"
+    },
+    "respond": {
+      "main": "dest/*.js"
+    },
+    "console_polyfill": {
+      "main": "index.js"
+    },
+    "font_awesome": {
+      "main": [
+        "css/font-awesome-ie7.css",
+        "css/font-awesome-ie7.min.css",
+        "css/font-awesome.css",
+        "css/font-awesome.min.css",
+        "font/fontawesome-webfont.eot",
+        "font/fontawesome-webfont.svg",
+        "font/fontawesome-webfont.ttf",
+        "font/fontawesome-webfont.woff",
+        "font/FontAwesome.otf",
+        "less/bootstrap.less",
+        "less/core.less",
+        "less/extras.less",
+        "less/font-awesome-ie7.less",
+        "less/font-awesome.less",
+        "less/icons.less",
+        "less/mixins.less",
+        "less/path.less",
+        "less/variables.less",
+        "scss/_bootstrap.scss",
+        "scss/_core.scss",
+        "scss/_extras.scss",
+        "scss/_icons.scss",
+        "scss/_mixins.scss",
+        "scss/_path.scss",
+        "scss/_variables.scss",
+        "scss/font-awesome-ie7.scss",
+        "scss/font-awesome.scss"
+      ],
+      "normalize": {
+        "css": "*.css",
+        "less": "*.less",
+        "scss": "*.scss",
+        "font": [
+          "*.eot",
+          "*.svg",
+          "*.ttf",
+          "*.woff",
+          "*.otf"
+        ]
+      }
+    },
+    "react": {
+      "main": [
+        "react-dom-server.js",
+        "react-dom-server.min.js",
+        "react-dom.js",
+        "react-dom.min.js",
+        "react.js",
+        "react.min.js",
+        "react-with-addons.js",
+        "react-with-addons.min.js"
+      ]
+    }
+  },
+  "license": "Apache-2.0"
+}
