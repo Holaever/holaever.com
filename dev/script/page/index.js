@@ -15,38 +15,38 @@ class PageHeader extends React.Component {
             mobile_menu_useTag_2 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>',
             mobile_menu_useTag_3 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>';
         return (
-            <header className="hs-header">
+            <header className="ae-container-fluid ae-container-fluid--full rk-header">
 
-                <input type="checkbox" id="mobile-menu" className="hs-mobile-menu"/>
-                <label for="mobile-menu">
+                <input type="checkbox" id="mobile-menu" className="rk-mobile-menu"/>
+                <label htmlFor="mobile-menu">
                     <svg dangerouslySetInnerHTML={{__html: mobile_menu_useTag_1}}></svg>
                     <svg dangerouslySetInnerHTML={{__html: mobile_menu_useTag_2}}></svg>
                     <svg dangerouslySetInnerHTML={{__html: mobile_menu_useTag_3}}></svg>
                 </label>
 
-                <div className="hs-topbar">
-                    <h1 className="hs-logo"><a href="index.html">Holaever<sup>tm</sup></a></h1>
-                    <nav className="hs-navigation">
-                        <ul className="hs-menu">
-                            <li className="hs-menu-item">
-                                <a href="index.html" className="hs-menu-link">首页</a>
+                <div className="ae-container-fluid rk-topbar">
+                    <h1 className="rk-logo"><a href="index.html">Holaever<sup>inc</sup></a></h1>
+                    <nav className="rk-navigation">
+                        <ul className="rk-menu">
+                            <li className="rk-menu__item">
+                                <a href="index.html" className="rk-menu__link">首页</a>
                             </li>
-                            <li className="hs-menu-item">
-                                <a href="portfolio.html" className="hs-menu-link">作品</a>
+                            <li className="rk-menu__item">
+                                <a href="portfolio.html" className="rk-menu__link">作品</a>
                             </li>
-                            <li className="hs-menu-item">
-                                <a href="blog.html" className="hs-menu-link">日志</a>
+                            <li className="rk-menu__item">
+                                <a href="blog.html" className="rk-menu__link">日志</a>
                             </li>
-                            <li className="active hs-menu-item">
-                                <a href="#0" className="hs-menu-link">关于</a>
+                            <li className="active rk-menu__item">
+                                <a href="#0" className="rk-menu__link">关于</a>
                             </li>
-                            <li className="hs-menu-item">
-                                <a href="contact.html" className="hs-menu-link">联系</a>
+                            <li className="rk-menu__item">
+                                <a href="contact.html" className="rk-menu__link">联系</a>
                             </li>
                         </ul>
-                        <form className="hs-search">
-                            <input type="text" placeholder="Search" id="hs-search" className="hs-search-field"/>
-                            <label for="hs-search">
+                        <form className="rk-search">
+                            <input type="text" placeholder="搜索" id="rk-search" className="rk-search-field"/>
+                            <label htmlFor="rk-search">
                                 <svg dangerouslySetInnerHTML={{__html: hs_search_useTag}}></svg>
                             </label>
                         </form>
@@ -60,26 +60,26 @@ class PageHeader extends React.Component {
 
 
 
-class Portrait extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <div className="hs-main">
-                <div className="">
-                    <div className="">
-                        <img src="public/img/st/team-1.jpg" alt="" className=""/>
-                        <h5 className="">Robert T. Williams</h5>
-                        <p className="">Graphic Designer</p>
-                        <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                        <a href="#" className="">@robertwilliams</a>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+// class Portrait extends React.Component {
+//     constructor(props) {
+//         super(props);
+//     }
+//     render() {
+//         return (
+//             <div className="rk-main">
+//                 <div className="">
+//                     <div className="">
+//                         <img src="public/img/st/team-1.jpg" alt="" className=""/>
+//                         <h5 className="">Robert T. Williams</h5>
+//                         <p className="">Graphic Designer</p>
+//                         <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+//                         <a href="#" className="">@robertwilliams</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
 
 
 
@@ -91,7 +91,7 @@ class Page extends React.Component {
         return (
             <div>
                 <PageHeader/>
-                <Portrait/>
+                {/*<Portrait/>*/}
             </div>
         );
     }

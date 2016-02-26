@@ -33,21 +33,21 @@ var PageHeader = function (_React$Component) {
                 mobile_menu_useTag_3 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>';
             return React.createElement(
                 'header',
-                { className: 'hs-header' },
-                React.createElement('input', { type: 'checkbox', id: 'mobile-menu', className: 'hs-mobile-menu' }),
+                { className: 'ae-container-fluid ae-container-fluid--full rk-header' },
+                React.createElement('input', { type: 'checkbox', id: 'mobile-menu', className: 'rk-mobile-menu' }),
                 React.createElement(
                     'label',
-                    { 'for': 'mobile-menu' },
+                    { htmlFor: 'mobile-menu' },
                     React.createElement('svg', { dangerouslySetInnerHTML: { __html: mobile_menu_useTag_1 } }),
                     React.createElement('svg', { dangerouslySetInnerHTML: { __html: mobile_menu_useTag_2 } }),
                     React.createElement('svg', { dangerouslySetInnerHTML: { __html: mobile_menu_useTag_3 } })
                 ),
                 React.createElement(
                     'div',
-                    { className: 'hs-topbar' },
+                    { className: 'ae-container-fluid rk-topbar' },
                     React.createElement(
                         'h1',
-                        { className: 'hs-logo' },
+                        { className: 'rk-logo' },
                         React.createElement(
                             'a',
                             { href: 'index.html' },
@@ -55,69 +55,69 @@ var PageHeader = function (_React$Component) {
                             React.createElement(
                                 'sup',
                                 null,
-                                'tm'
+                                'inc'
                             )
                         )
                     ),
                     React.createElement(
                         'nav',
-                        { className: 'hs-navigation' },
+                        { className: 'rk-navigation' },
                         React.createElement(
                             'ul',
-                            { className: 'hs-menu' },
+                            { className: 'rk-menu' },
                             React.createElement(
                                 'li',
-                                { className: 'hs-menu-item' },
+                                { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'index.html', className: 'hs-menu-link' },
+                                    { href: 'index.html', className: 'rk-menu__link' },
                                     '首页'
                                 )
                             ),
                             React.createElement(
                                 'li',
-                                { className: 'hs-menu-item' },
+                                { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'portfolio.html', className: 'hs-menu-link' },
+                                    { href: 'portfolio.html', className: 'rk-menu__link' },
                                     '作品'
                                 )
                             ),
                             React.createElement(
                                 'li',
-                                { className: 'hs-menu-item' },
+                                { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'blog.html', className: 'hs-menu-link' },
+                                    { href: 'blog.html', className: 'rk-menu__link' },
                                     '日志'
                                 )
                             ),
                             React.createElement(
                                 'li',
-                                { className: 'active hs-menu-item' },
+                                { className: 'active rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: '#0', className: 'hs-menu-link' },
+                                    { href: '#0', className: 'rk-menu__link' },
                                     '关于'
                                 )
                             ),
                             React.createElement(
                                 'li',
-                                { className: 'hs-menu-item' },
+                                { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'contact.html', className: 'hs-menu-link' },
+                                    { href: 'contact.html', className: 'rk-menu__link' },
                                     '联系'
                                 )
                             )
                         ),
                         React.createElement(
                             'form',
-                            { className: 'hs-search' },
-                            React.createElement('input', { type: 'text', placeholder: 'Search', id: 'hs-search', className: 'hs-search-field' }),
+                            { className: 'rk-search' },
+                            React.createElement('input', { type: 'text', placeholder: '搜索', id: 'rk-search', className: 'rk-search-field' }),
                             React.createElement(
                                 'label',
-                                { 'for': 'hs-search' },
+                                { htmlFor: 'rk-search' },
                                 React.createElement('svg', { dangerouslySetInnerHTML: { __html: hs_search_useTag } })
                             )
                         )
@@ -130,59 +130,29 @@ var PageHeader = function (_React$Component) {
     return PageHeader;
 }(React.Component);
 
-var Portrait = function (_React$Component2) {
-    _inherits(Portrait, _React$Component2);
+// class Portrait extends React.Component {
+//     constructor(props) {
+//         super(props);
+//     }
+//     render() {
+//         return (
+//             <div className="rk-main">
+//                 <div className="">
+//                     <div className="">
+//                         <img src="public/img/st/team-1.jpg" alt="" className=""/>
+//                         <h5 className="">Robert T. Williams</h5>
+//                         <p className="">Graphic Designer</p>
+//                         <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+//                         <a href="#" className="">@robertwilliams</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
 
-    function Portrait(props) {
-        _classCallCheck(this, Portrait);
-
-        return _possibleConstructorReturn(this, Object.getPrototypeOf(Portrait).call(this, props));
-    }
-
-    _createClass(Portrait, [{
-        key: 'render',
-        value: function render() {
-            return React.createElement(
-                'div',
-                { className: 'hs-main' },
-                React.createElement(
-                    'div',
-                    { className: '' },
-                    React.createElement(
-                        'div',
-                        { className: '' },
-                        React.createElement('img', { src: 'public/img/st/team-1.jpg', alt: '', className: '' }),
-                        React.createElement(
-                            'h5',
-                            { className: '' },
-                            'Robert T. Williams'
-                        ),
-                        React.createElement(
-                            'p',
-                            { className: '' },
-                            'Graphic Designer'
-                        ),
-                        React.createElement(
-                            'p',
-                            { className: '' },
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
-                        ),
-                        React.createElement(
-                            'a',
-                            { href: '#', className: '' },
-                            '@robertwilliams'
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Portrait;
-}(React.Component);
-
-var Page = function (_React$Component3) {
-    _inherits(Page, _React$Component3);
+var Page = function (_React$Component2) {
+    _inherits(Page, _React$Component2);
 
     function Page(props) {
         _classCallCheck(this, Page);
@@ -196,8 +166,7 @@ var Page = function (_React$Component3) {
             return React.createElement(
                 'div',
                 null,
-                React.createElement(PageHeader, null),
-                React.createElement(Portrait, null)
+                React.createElement(PageHeader, null)
             );
         }
     }]);
