@@ -19,38 +19,38 @@ var content = {
     id: 0,
     members: [{
         id: 0.1,
-        'photo': 'public/img/st/team-1.jpg',
-        'name': 'Robert T. Williams',
-        'function': 'Graphic Designer',
+        'photo': 'public/img/judy.jpg',
+        'name': '丁洁岚',
+        'function': '视觉设计师',
         'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         'social': '@robertwilliams'
     }, {
         id: 0.2,
-        'photo': 'public/img/st/team-1.jpg',
-        'name': 'Robert T. Williams',
-        'function': 'Graphic Designer',
+        'photo': 'public/img/tony.jpg',
+        'name': '沈维忠',
+        'function': '创始人 & CEO',
         'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         'social': '@robertwilliams'
     }, {
         id: 0.3,
-        'photo': 'public/img/st/team-1.jpg',
-        'name': 'Robert T. Williams',
-        'function': 'Graphic Designer',
+        'photo': 'public/img/kain.jpg',
+        'name': '石胜',
+        'function': '全堆工程师',
         'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         'social': '@robertwilliams'
     }],
     about: [{
         id: 0.1,
-        title: 'About Us',
-        disc: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ']
+        title: '心态',
+        disc: ['每一个成员见到别的伙伴，或面对新的工具、技术，或发现身边美好的事物，或面对客户，或面对每一次的挑战...... 都会亲切地说声 “哈喽”！']
     }, {
         id: 0.1,
-        title: 'Our Mission',
-        disc: ['Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
+        title: '能力',
+        disc: ['每一个成员都在不停地学习、实践新的知识、技能，恰巧这些源源不断的积累让我们掌握了些什么以打造不同寻常、电影级别的软件产品。']
     }, {
         id: 0.1,
-        title: 'Our Clients',
-        disc: ['Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ', 'Nemo enim ipsam voluptatem quia voluptas']
+        title: '作为',
+        disc: ['每一个成员都有自己的专长，但都不为职责、角色限制，全力以赴！']
     }]
 };
 
@@ -66,10 +66,10 @@ var PageHeader = function (_React$Component) {
     _createClass(PageHeader, [{
         key: 'render',
         value: function render() {
-            var hs_search_useTag = '<use xlink:href="public/img/st/symbols.svg#icon-search"></use>',
-                mobile_menu_useTag_1 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>',
-                mobile_menu_useTag_2 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>',
-                mobile_menu_useTag_3 = '<use xlink:href="public/img/st/symbols.svg#bar"></use>';
+            var hs_search_useTag = '<use xlink:href="public/img/symbols.svg#icon-search"></use>',
+                mobile_menu_useTag_1 = '<use xlink:href="public/img/symbols.svg#bar"></use>',
+                mobile_menu_useTag_2 = '<use xlink:href="public/img/symbols.svg#bar"></use>',
+                mobile_menu_useTag_3 = '<use xlink:href="public/img/symbols.svg#bar"></use>';
             return React.createElement(
                 'header',
                 { className: 'ae-container-fluid ae-container-fluid--full rk-header' },
@@ -109,7 +109,7 @@ var PageHeader = function (_React$Component) {
                                 { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'index.html', className: 'rk-menu__link' },
+                                    { href: 'index.html', 'data-hint': '敬请期待', className: 'rk-menu__link hint--bottom', onclick: false },
                                     '首页'
                                 )
                             ),
@@ -118,7 +118,7 @@ var PageHeader = function (_React$Component) {
                                 { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'portfolio.html', className: 'rk-menu__link' },
+                                    { href: 'portfolio.html', 'data-hint': '敬请期待', className: 'rk-menu__link hint--bottom' },
                                     '作品'
                                 )
                             ),
@@ -127,7 +127,7 @@ var PageHeader = function (_React$Component) {
                                 { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'blog.html', className: 'rk-menu__link' },
+                                    { href: 'blog.html', 'data-hint': '敬请期待', className: 'rk-menu__link hint--bottom' },
                                     '日志'
                                 )
                             ),
@@ -145,7 +145,7 @@ var PageHeader = function (_React$Component) {
                                 { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'contact.html', className: 'rk-menu__link' },
+                                    { href: 'contact.html', 'data-hint': '敬请期待', className: 'rk-menu__link hint--bottom' },
                                     '联系'
                                 )
                             )
@@ -194,16 +194,6 @@ var Portrait = function (_React$Component2) {
                     'p',
                     { className: 'ae-u-bolder au-mb-3' },
                     this.props.member.function
-                ),
-                React.createElement(
-                    'p',
-                    { className: 'au-lg-ta-left au-mb-3 au-pl-4 au-pr-4' },
-                    this.props.member.desc
-                ),
-                React.createElement(
-                    'a',
-                    { href: '#', className: 'ae-u-bolder au-underline' },
-                    this.props.member.social
                 )
             );
         }
@@ -258,12 +248,12 @@ var Quotes = function (_React$Component4) {
                     React.createElement(
                         'h4',
                         { className: 'ae-u-bolder' },
-                        'Title example'
+                        '我们致力于打造不同寻常、电影级别的软件产品！'
                     ),
                     React.createElement(
                         'p',
                         null,
-                        'Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.'
+                        '我们是一群创意的思想家和制造者，致力于打造不同寻常、电影级别的软件产品，这是我们的品牌。我们只维护一份解决方案，不断迭代更新、追求完美，以确保较高程度的质量、灵活、效率，并与时俱进！团队、公司、产品，Holaever 的发展路线。'
                     )
                 )
             );
@@ -351,10 +341,10 @@ var Footer = function (_React$Component7) {
     _createClass(Footer, [{
         key: 'render',
         value: function render() {
-            var facebook = '<use xlink:href="public/img/st/symbols.svg#icon-facebook"></use>',
-                twitter = '<use xlink:href="public/img/st/symbols.svg#icon-twitter"></use>',
-                pinterest = '<use xlink:href="public/img/st/symbols.svg#icon-pinterest"></use>',
-                tumblr = '<use xlink:href="public/img/st/symbols.svg#icon-tumblr"></use>';
+            var facebook = '<use xlink:href="public/img/symbols.svg#icon-facebook"></use>',
+                twitter = '<use xlink:href="public/img/symbols.svg#icon-twitter"></use>',
+                pinterest = '<use xlink:href="public/img/symbols.svg#icon-pinterest"></use>',
+                tumblr = '<use xlink:href="public/img/symbols.svg#icon-tumblr"></use>';
             return React.createElement(
                 'div',
                 { className: 'ae-container-fluid rk-footer' },
@@ -381,7 +371,7 @@ var Footer = function (_React$Component7) {
                                 { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'documentation.html', className: 'rk-menu__link' },
+                                    { href: 'documentation.html', 'data-hint': '敬请期待', className: 'rk-menu__link hint--top' },
                                     '作品'
                                 )
                             ),
@@ -390,7 +380,7 @@ var Footer = function (_React$Component7) {
                                 { className: 'rk-menu__item' },
                                 React.createElement(
                                     'a',
-                                    { href: 'contact.html', className: 'rk-menu__link' },
+                                    { href: 'contact.html', 'data-hint': '敬请期待', className: 'rk-menu__link hint--top' },
                                     '联系'
                                 )
                             )
@@ -416,7 +406,7 @@ var Footer = function (_React$Component7) {
                         { className: 'ae-grid__item item-lg-4 au-xs-ta-center' },
                         React.createElement(
                             'a',
-                            { href: '#0', className: 'rk-social-btn' },
+                            { href: 'https://www.facebook.com/holaever/', className: 'rk-social-btn' },
                             React.createElement(
                                 'svg',
                                 null,
@@ -425,7 +415,7 @@ var Footer = function (_React$Component7) {
                         ),
                         React.createElement(
                             'a',
-                            { href: '#0', className: 'rk-social-btn' },
+                            { href: '#0', 'data-hint': '敬请期待', className: 'rk-social-btn hint--top' },
                             React.createElement(
                                 'svg',
                                 null,
@@ -434,7 +424,7 @@ var Footer = function (_React$Component7) {
                         ),
                         React.createElement(
                             'a',
-                            { href: '#0', className: 'rk-social-btn' },
+                            { href: '#0', 'data-hint': '敬请期待', className: 'rk-social-btn hint--top' },
                             React.createElement(
                                 'svg',
                                 null,
@@ -443,7 +433,7 @@ var Footer = function (_React$Component7) {
                         ),
                         React.createElement(
                             'a',
-                            { href: '#0', className: 'rk-social-btn' },
+                            { href: '#0', 'data-hint': '敬请期待', className: 'rk-social-btn hint--top' },
                             React.createElement(
                                 'svg',
                                 null,
