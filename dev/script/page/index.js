@@ -43,13 +43,13 @@ var content = {
             '每一个成员见到别的伙伴，或面对新的工具、技术，或发现身边美好的事物，或面对客户，或面对每一次的挑战...... 都会亲切地说声 “哈喽”！'
         ]
     }, {
-        id: 0.1,
+        id: 0.2,
         title: '能力',
         disc: [
             '每一个成员都在不停地学习、实践新的知识、技能，恰巧这些源源不断的积累让我们掌握了些什么以打造不同寻常、电影级别的软件产品。'
         ]
     }, {
-        id: 0.1,
+        id: 0.3,
         title: '作为',
         disc: [
             '每一个成员都有自己的专长，但都不为职责、角色限制，全力以赴！'
@@ -285,7 +285,7 @@ class Footer extends React.Component {
                                 <a href="mailto:hello@holaever.com" className="rk-dark-color ">hello@holaever.com</a>
                             </span>
                         </p>
-                        <p class="rk-footer__text rk-footer__by">
+                        <p className="rk-footer__text rk-footer__by">
                             我们打造非比寻常、电影级别的软件产品!
                         </p>
                     </div>
