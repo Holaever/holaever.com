@@ -12,7 +12,7 @@ bs   = require('browser-sync')
 gulp.task 'bs', ->
   bs
     browser: 'google chrome'
-    port: 9022,
+    port: 9022
     server:
       baseDir: './'
   return
