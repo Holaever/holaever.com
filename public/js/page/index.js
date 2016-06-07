@@ -387,7 +387,7 @@ var Page = function (_React$Component) {
             /*-----------------------------------------------------*/
             var setup = function setup() {
                 for (var i = 0; i < sphereNum; i++) {
-                    s[i] = new sphere({ radius: 100, particleNum: 300, center: { x: 70 * i - (sphereNum - 1) * 70 / 2, y: 0, z: 0 } });
+                    s[i] = new sphere({ radius: 100, particleNum: 250, center: { x: 70 * i - (sphereNum - 1) * 70 / 2, y: 0, z: 0 } });
                 };
             };
             /*-----------------------------------------------------*/
